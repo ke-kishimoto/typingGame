@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>タイピングゲーム</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        /* body {
+            text-align: center;
+        }
+        #target {
+            font-size: 48px;
+        }
+        #start-btn {
+            font-size: 24px;
+        } */
+        #code {
+            text-align: left;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>キーボードで入力したキーが表示されます</h1>
+    <p id="target"></p>
+    <script>
+        'use strict';
+
+        // idがtargetの要素を取得
+        const target = document.getElementById('target');
+
+        // キー押下時の処理
+        document.addEventListener('keydown', e => {
+            target.textContent = e.key;  
+        });
+    </script>
+<pre id="code">
+    ソースコード（bodyの中のみ抜粋）
+    <code>
+        &lt;h1&gt;キーボードで入力したキーが表示されます&lt;/h1&gt;
+        &lt;p id="target"&gt;&lt;/p&gt;
+        &lt;script&gt;
+            'use strict';
+    
+            // idがtargetの要素を取得
+            const target = document.getElementById('target');
+    
+            // キー押下時の処理
+            document.addEventListener('keydown', e =&gt; {
+                target.textContent = e.key;  
+            });
+        &lt;/script&gt;
+    </code>
+</pre>
+</body>
+</html>

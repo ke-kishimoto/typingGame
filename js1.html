@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>JSの基本1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        /* body {
+            text-align: center;
+        }
+        #target {
+            font-size: 48px;
+        }
+        #start-btn {
+            
+            font-size: 24px;
+        } */
+        #code {
+            text-align: left;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScriptの基本を理解しよう</h1>
+    <p id="target1"></p>
+    <p id="target2"></p>
+    <p id="target3"></p>
+    <p id="target3"></p>
+    <script>
+        'use strict';  // ←文法チェックをしてくれる。決まり文句だと思ってください
+
+        // スラッシュ２つはコメント。処理に影響のないもの
+
+        // numという変数に10という値を代入する
+        let num = 10;
+        // idがtarget1の要素を取得
+        const target1 = document.getElementById('target1');
+        // target1のコンテンツにnumの値をセットする
+        target1.textContent = num;
+        
+        // numに10をプラスする
+        num = num + 10;
+        // numをtarget2の要素にセットする
+        const target2 = document.getElementById('target2');
+        target2.textContent = num;
+
+        // 文字を扱う場合は''で囲む
+        let msg = 'Hello';
+        const target3 = document.getElementById('target3');
+        target3.textContent = msg;
+    </script>
+<pre id="code">
+    ソースコード
+    <code>
+        &lt;h1&gt;JavaScriptの基本を理解しよう&lt;/h1&gt;
+        &lt;p id="target1"&gt;&lt;/p&gt;
+        &lt;p id="target2"&gt;&lt;/p&gt;
+        &lt;p id="target3"&gt;&lt;/p&gt;
+        &lt;p id="target3"&gt;&lt;/p&gt;
+        &lt;script&gt;
+            'use strict';  // ←文法チェックをしてくれる。決まり文句だと思ってください
+
+            // スラッシュ２つはコメント。処理に影響のないもの
+
+            // numという変数に10という値を代入する
+            let num = 10;
+            // idがtarget1の要素を取得
+            const target1 = document.getElementById('target1');
+            // target1のコンテンツにnumの値をセットする
+            target1.textContent = num;
+            
+            // numに10をプラスする
+            num = num + 10;
+            // numをtarget2の要素にセットする
+            const target2 = document.getElementById('target2');
+            target2.textContent = num;
+
+            // 文字を扱う場合は''で囲む
+            let msg = 'Hello';
+            const target3 = document.getElementById('target3');
+            target3.textContent = msg;
+
+        &lt;/script&gt;
+    </code>
+</pre>
+</body>
+</html>

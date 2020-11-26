@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ボタン押下時の処理2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        /* body {
+            text-align: center;
+        }
+        #target {
+            font-size: 48px;
+        }
+        #start-btn {
+            font-size: 24px;
+        } */
+        #code {
+            text-align: left;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>配列の中からランダムで文字が出力されます</h1>
+    <p><button type="button" id="start-btn" name="start-btn">スタート</button></p>
+    <p id="target1"></p>
+    <p id="target2"></p>
+    <p id="target3"></p>
+    <p id="target4"></p>
+    <script>
+        'use strict';
+
+        const target1 = document.getElementById('target1');
+        const target2 = document.getElementById('target2');
+        const target3 = document.getElementById('target3');
+        const target4 = document.getElementById('target4');
+
+        // 配列を定義
+        // 複数の値をまとめて保持することができます
+        let words = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'pink'];
+
+        target1.textContent = words[0];  // redが取得される
+        target2.textContent = words[1];  // blueが取得される
+        target3.textContent = words.length;  // 値の数が取得できる
+
+
+        // ゲームスタート時の処理
+        let gameStart = () => {
+            // 配列で定義されたものからランダムで一つをwordに入れる
+            // []の中では、0~6までのランダムな値が取得できる
+            let word = words[Math.floor(Math.random() * words.length)];
+            // target要素に表示する
+            target4.textContent = word;
+        };
+
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', gameStart);
+    </script>
+<pre id="code">
+    ソースコード（bodyの中のみ抜粋）
+    <code>
+        &lt;h1&gt;配列の中からランダムで文字が出力されます&lt;/h1&gt;
+        &lt;p&gt;&lt;button type="button" id="start-btn" name="start-btn"&gt;スタート&lt;/button&gt;&lt;/p&gt;
+        &lt;p id="target1"&gt;&lt;/p&gt;
+        &lt;p id="target2"&gt;&lt;/p&gt;
+        &lt;p id="target3"&gt;&lt;/p&gt;
+        &lt;p id="target4"&gt;&lt;/p&gt;
+        &lt;script&gt;
+            'use strict';
+
+            const target1 = document.getElementById('target1');
+            const target2 = document.getElementById('target2');
+            const target3 = document.getElementById('target3');
+            const target4 = document.getElementById('target4');
+
+            // 配列を定義
+            // 複数の値をまとめて保持することができます
+            let words = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'pink'];
+
+            target1.textContent = words[0];  // redが取得される
+            target2.textContent = words[1];  // blueが取得される
+            target3.textContent = words.length;  // 値の数が取得できる
+
+
+            // ゲームスタート時の処理
+            let gameStart = () =&gt; {
+                // 配列で定義されたものからランダムで一つをwordに入れる
+                // []の中では、0~6までのランダムな値が取得できる
+                let word = words[Math.floor(Math.random() * words.length)];
+                // target要素に表示する
+                target4.textContent = word;
+            };
+
+            // ボタン押下時にゲームスタート処理を実行
+            document.getElementById('start-btn').addEventListener('click', gameStart);
+        &lt;/script&gt;
+    </code>
+</pre>
+</body>
+</html>
