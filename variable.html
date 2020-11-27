@@ -30,26 +30,24 @@
     <p id="target3"></p>
     <p id="target3"></p>
     <script>
-        'use strict';  // ←文法チェックをしてくれる。決まり文句だと思ってください
+        'use strict';
 
-        // スラッシュ２つはコメント。処理に影響のないもの
+        // 要素を取得
+        const target1 = document.getElementById('target1');
+        const target2 = document.getElementById('target2');
+        const target3 = document.getElementById('target3');
 
+        // target1のコンテンツにnumの値をセットする
         // numという変数に10という値を代入する
         let num = 10;
-        // idがtarget1の要素を取得
-        const target1 = document.getElementById('target1');
-        // target1のコンテンツにnumの値をセットする
         target1.textContent = num;
         
         // numに10をプラスする
         num = num + 10;
-        // numをtarget2の要素にセットする
-        const target2 = document.getElementById('target2');
         target2.textContent = num;
 
         // 文字を扱う場合は''で囲む
         let msg = 'Hello';
-        const target3 = document.getElementById('target3');
         target3.textContent = msg;
     </script>
 <pre id="code">
@@ -61,26 +59,24 @@
         &lt;p id="target3"&gt;&lt;/p&gt;
         &lt;p id="target3"&gt;&lt;/p&gt;
         &lt;script&gt;
-            'use strict';  // ←文法チェックをしてくれる。決まり文句だと思ってください
+            'use strict';
 
-            // スラッシュ２つはコメント。処理に影響のないもの
+            // 要素を取得
+            const target1 = document.getElementById('target1');
+            const target2 = document.getElementById('target2');
+            const target3 = document.getElementById('target3');
 
+            // target1のコンテンツにnumの値をセットする
             // numという変数に10という値を代入する
             let num = 10;
-            // idがtarget1の要素を取得
-            const target1 = document.getElementById('target1');
-            // target1のコンテンツにnumの値をセットする
             target1.textContent = num;
             
             // numに10をプラスする
             num = num + 10;
-            // numをtarget2の要素にセットする
-            const target2 = document.getElementById('target2');
             target2.textContent = num;
 
             // 文字を扱う場合は''で囲む
             let msg = 'Hello';
-            const target3 = document.getElementById('target3');
             target3.textContent = msg;
 
         &lt;/script&gt;

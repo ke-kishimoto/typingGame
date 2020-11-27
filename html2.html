@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMLの基本2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        /* CSSはここに書きます */
+        #code {
+            text-align: left;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ボタン・テキストボックス・プルダウンの表示</h1>
+
+    <!-- ボタンを表示する -->
+    <p><button type="button" id="btn">ボタン</button></p>
+
+    <!-- テキストボックス -->
+    <p><input type="text" id="text"></p>
+
+    <!-- プルダウン -->
+    <p>
+        <select id="season">
+            <option value="spring">春</option>
+            <option value="summer">夏</option>
+            <option value="autumn">秋</option>
+            <option value="winter">冬</option>
+        </select>
+    </p>
+
+<pre id="code">
+    ソースコード
+    <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ja"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;HTMLの基本2&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;ボタン・テキストボックス・プルダウンの表示&lt;/h1&gt;
+
+            &lt;!-- ボタンを表示する --&gt;
+            &lt;p&gt;&lt;button type="button" id="btn"&gt;ボタン&lt;/button&gt;&lt;/p&gt;
+            
+            &lt;!-- テキストボックス --&gt;
+            &lt;p&gt;&lt;input type="text" id="text"&gt;&lt;/p&gt;
+            
+            &lt;!-- プルダウン --&gt;
+            &lt;p&gt;
+                &lt;select id="season"&gt;
+                    &lt;option value="spring"&gt;春&lt;/option&gt;
+                    &lt;option value="summer"&gt;夏&lt;/option&gt;
+                    &lt;option value="autumn"&gt;秋&lt;/option&gt;
+                    &lt;option value="winter"&gt;冬&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+</body>
+</html>
