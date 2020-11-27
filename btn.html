@@ -24,7 +24,7 @@
     </style>
 </head>
 <body>
-    <h1>スタートボタンを押すと文字が出力されます</h1>
+    <h1>ボタン押下時の処理</h1>
     <p><button type="button" id="start-btn">スタート</button></p>
     <p id="target"></p>
     <script>
@@ -33,20 +33,16 @@
         // idがtargetの要素を取得
         const target = document.getElementById('target');
 
-        // ゲームスタート時の処理の定義
-        let gameStart = () => {
-            // target要素にゲームスタートという文字を表示する
+        // ボタンがクリックされた時の処理
+        document.getElementById('start-btn').addEventListener('click', e => {
             target.textContent = 'ゲームスタート';
-        };
-
-        // ボタンがクリックされた時にgameStart処理を実行
-        document.getElementById('start-btn').addEventListener('click', gameStart);
+        });
     </script>
 
 <pre id="code">
     ソースコード（bodyの中のみ抜粋）
     <code>
-        &lt;h1&gt;スタートボタンを押すと文字が出力されます&lt;/h1&gt;
+        &lt;h1&gt;ボタン押下時の処理&lt;/h1&gt;
         &lt;p&gt;&lt;button type="button" id="start-btn"&gt;スタート&lt;/button&gt;&lt;/p&gt;
         &lt;p id="target"&gt;&lt;/p&gt;
         &lt;script&gt;
@@ -55,14 +51,10 @@
             // idがtargetの要素を取得
             const target = document.getElementById('target');
 
-            // ゲームスタート時の処理の定義
-            let gameStart = () =&gt; {
-                // target要素にゲームスタートという文字を表示する
+            // ボタンがクリックされた時の処理
+            document.getElementById('start-btn').addEventListener('click', e =&gt; {
                 target.textContent = 'ゲームスタート';
-            };
-
-            // ボタンがクリックされた時にgameStart処理を実行
-            document.getElementById('start-btn').addEventListener('click', gameStart);
+            });
         &lt;/script&gt;
     </code>
 </pre>

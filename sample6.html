@@ -18,12 +18,18 @@
 <body>
     <h1>タイピングゲーム</h1>
     <p>単語テーマ
-        <select id="word-theme" name="word-theme">
+        <select id="word-theme">
             <option value="color">カラー</option>
             <option value="fruits">フルーツ</option>
         </select>
+        出題数
+        <select id="question-num">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select>
     </p>
-    <p><button type="button" id="start-btn" name="start-btn">スタート</button></p>
+    <p><button type="button" id="start-btn">スタート</button></p>
     <p id="target"></p>
     <script>
         'use strict';
@@ -32,25 +38,25 @@
         let wordCount = 0; // 入力を終えた文字数
         let word = ''  // 現在入力中の文字
         let index = 0; // 入力中の文字の位置
+        let questionNum = 5;
         const target = document.getElementById('target');
 
-        // ゲームスタート時の処理
-        let gameStart = () => {
-
-            const wordTheme = document.getElementById('word-theme').value;
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', e => {
+            let wordTheme = document.getElementById('word-theme').value;
             if(wordTheme === 'color') {
                     words = ['red', 'blue', 'green', 'yellow', 'pink', 'black', 'white', 'purple', 'gray', 'orange'];
             } else if(wordTheme === 'fruits') {
                 words = ['apple', 'banana', 'grape', 'peach', 'orange', 'pear', 'melon', 'lemon', 'strawberry', 'mango'];
             }
 
+            // 出題数の取得
+            questionNum = Number(document.getElementById('question-num').value);
+
             wordCount = 0;
             word = words[Math.floor(Math.random() * words.length)];
             target.textContent = word;
-        };
-
-        // ボタン押下時にゲームスタート処理を実行
-        document.getElementById('start-btn').addEventListener('click', gameStart, false);
+        });
 
         // キー押下時の処理
         document.addEventListener('keydown', e => {
@@ -67,7 +73,7 @@
                     index = 0; // 初期化
                     wordCount = wordCount + 1;   // 単語数をマイナス1
 
-                    if(wordCount === 5) {
+                    if(wordCount === questionNum) {
                         // ゲーム終了時
                         target.textContent = 'クリア'; // 画面にクリアと表示                      
                     } else {

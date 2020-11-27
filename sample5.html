@@ -29,16 +29,13 @@
         const target = document.getElementById('target');
         let startTime = 0;
 
-        // ゲームスタート時の処理
-        let gameStart = () => {
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', e => {
             wordCount = 0;
             word = words[Math.floor(Math.random() * words.length)];
             target.textContent = word;
             startTime = new Date();
-        };
-
-        // ボタン押下時にゲームスタート処理を実行
-        document.getElementById('start-btn').addEventListener('click', gameStart);
+        });
 
         // キー押下時の処理
         document.addEventListener('keydown', e => {

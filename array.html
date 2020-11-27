@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>ボタン押下時の処理2</title>
+    <title>配列について</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-    <h1>配列の中からランダムで文字が出力されます</h1>
+    <h1>配列について</h1>
     <p><button type="button" id="start-btn" name="start-btn">スタート</button></p>
     <p id="target1"></p>
     <p id="target2"></p>
@@ -45,23 +45,19 @@
         target2.textContent = words[1];  // blueが取得される
         target3.textContent = words.length;  // 値の数が取得できる
 
-
-        // ゲームスタート時の処理
-        let gameStart = () => {
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', e => {
             // 配列で定義されたものからランダムで一つをwordに入れる
             // []の中では、0~6までのランダムな値が取得できる
             let word = words[Math.floor(Math.random() * words.length)];
             // target要素に表示する
             target4.textContent = word;
-        };
-
-        // ボタン押下時にゲームスタート処理を実行
-        document.getElementById('start-btn').addEventListener('click', gameStart);
+        });
     </script>
 <pre id="code">
     ソースコード（bodyの中のみ抜粋）
     <code>
-        &lt;h1&gt;配列の中からランダムで文字が出力されます&lt;/h1&gt;
+        &lt;h1&gt;配列について&lt;/h1&gt;
         &lt;p&gt;&lt;button type="button" id="start-btn" name="start-btn"&gt;スタート&lt;/button&gt;&lt;/p&gt;
         &lt;p id="target1"&gt;&lt;/p&gt;
         &lt;p id="target2"&gt;&lt;/p&gt;
@@ -83,18 +79,14 @@
             target2.textContent = words[1];  // blueが取得される
             target3.textContent = words.length;  // 値の数が取得できる
 
-
-            // ゲームスタート時の処理
-            let gameStart = () =&gt; {
+            // ボタン押下時にゲームスタート処理を実行
+            document.getElementById('start-btn').addEventListener('click', e =&gt; {
                 // 配列で定義されたものからランダムで一つをwordに入れる
                 // []の中では、0~6までのランダムな値が取得できる
                 let word = words[Math.floor(Math.random() * words.length)];
                 // target要素に表示する
                 target4.textContent = word;
-            };
-
-            // ボタン押下時にゲームスタート処理を実行
-            document.getElementById('start-btn').addEventListener('click', gameStart);
+            });
         &lt;/script&gt;
     </code>
 </pre>

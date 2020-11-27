@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>プルダウン</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        #code {
+            text-align: left;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>プルダウンからの値の取得</h1>
+    <p>色
+        <select id="color">
+            <option value="red">赤</option>
+            <option value="blue">青</option>
+            <option value="green">緑</option>
+        </select>
+    </p>
+    <p><button type="button" id="select-btn">選択</button></p>
+    <p id="target"></p>
+    <script>
+        'use strict';
+
+        const target = document.getElementById('target');
+
+        // ゲームスタート時の処理
+        let selectBtn = () => {
+
+            // プルダウンの値取得
+            let color = document.getElementById('color').value;
+
+            target.textContent = color;
+        };
+
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('select-btn').addEventListener('click', selectBtn);
+    </script>
+<pre id="code">
+    ソースコード
+    <code>
+        &lt;h1&gt;プルダウンからの値の取得&lt;/h1&gt;
+        &lt;p&gt;色
+            &lt;select id="color"&gt;
+                &lt;option value="red"&gt;赤&lt;/option&gt;
+                &lt;option value="blue"&gt;青&lt;/option&gt;
+                &lt;option value="green"&gt;緑&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/p&gt;
+        &lt;p&gt;&lt;button type="button" id="select-btn"&gt;選択&lt;/button&gt;&lt;/p&gt;
+        &lt;p id="target"&gt;&lt;/p&gt;
+        &lt;script&gt;
+            'use strict';
+
+            const target = document.getElementById('target');
+
+            // ゲームスタート時の処理
+            let selectBtn = () =&gt; {
+
+                // プルダウンの値取得
+                let color = document.getElementById('color').value;
+
+                target.textContent = color;
+            };
+
+            // ボタン押下時にゲームスタート処理を実行
+            document.getElementById('select-btn').addEventListener('click', selectBtn);
+        &lt;/script&gt;
+    </code>
+    
+</pre>
+</body>
+</html>

@@ -39,17 +39,14 @@
             }, 50);
         }
 
-        // ゲームスタート時の処理
-        let gameStart = () => {
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', e => {
             wordCount = 0;
             word = words[Math.floor(Math.random() * words.length)];
             target.textContent = word;
             startTime = new Date();
             dispTime();
-        };
-
-        // ボタン押下時にゲームスタート処理を実行
-        document.getElementById('start-btn').addEventListener('click', gameStart, false);
+        });
 
         // キー押下時の処理
         document.addEventListener('keydown', e => {

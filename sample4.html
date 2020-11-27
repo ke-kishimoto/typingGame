@@ -32,16 +32,13 @@
         let missCount = 0;
         const countEl = document.getElementById('count');
 
-        // ゲームスタート時の処理
-        let gameStart = () => {
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', e => {
             wordCount = 0;
             word = words.splice(Math.floor(Math.random() * words.length), 1).join();
             target.textContent = word;
             missCount = 0;
-        };
-
-        // ボタン押下時にゲームスタート処理を実行
-        document.getElementById('start-btn').addEventListener('click', gameStart, false);
+        });
 
         // キー押下時の処理
         document.addEventListener('keydown', e => {

@@ -28,15 +28,12 @@
         let index = 0; // 入力中の文字の位置
         const target = document.getElementById('target');
 
-        // ゲームスタート時の処理
-        let gameStart = () => {
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', e => {
             wordCount = 0;
             word = words[Math.floor(Math.random() * words.length)];
             target.textContent = word;
-        };
-
-        // ボタン押下時にゲームスタート処理を実行
-        document.getElementById('start-btn').addEventListener('click', gameStart, false);
+        });
 
         // キー押下時の処理
         document.addEventListener('keydown', e => {

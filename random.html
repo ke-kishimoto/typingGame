@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ランダムな数値の取得</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+       
+        #code {
+            text-align: left;
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>ランダムな数値を取得します</h1>
+    <p><button type="button" id="start-btn" name="start-btn">スタート</button></p>
+    <p id="target1"></p>
+    <p id="target2"></p>
+    <p id="target3"></p>
+    <script>
+        'use strict';
+
+        const target1 = document.getElementById('target1');
+        const target2 = document.getElementById('target2');
+        const target3 = document.getElementById('target3');
+
+        // ボタン押下時にゲームスタート処理を実行
+        document.getElementById('start-btn').addEventListener('click', e => {
+
+            target1.textContent = Math.random();  // 0~1のランダムな値(小数) 
+            target2.textContent = Math.random() * 10;  // 0~10のランダムな値(小数)
+            target3.textContent = Math.floor(Math.random() * 10);  // 0~10のランダムな値(整数)
+        });
+    </script>
+<pre id="code">
+    ソースコード（bodyの中のみ抜粋）
+    <code>
+        &lt;h1&gt;ランダムな数値を取得します&lt;/h1&gt;
+        &lt;p&gt;&lt;button type="button" id="start-btn" name="start-btn"&gt;スタート&lt;/button&gt;&lt;/p&gt;
+        &lt;p id="target1"&gt;&lt;/p&gt;
+        &lt;p id="target2"&gt;&lt;/p&gt;
+        &lt;p id="target3"&gt;&lt;/p&gt;
+        &lt;script&gt;
+            'use strict';
+
+            const target1 = document.getElementById('target1');
+            const target2 = document.getElementById('target2');
+            const target3 = document.getElementById('target3');
+
+            // ボタン押下時にゲームスタート処理を実行
+            document.getElementById('start-btn').addEventListener('click', e =&gt; {
+
+                target1.textContent = Math.random();  // 0~1のランダムな値(小数) 
+                target2.textContent = Math.random() * 10;  // 0~10のランダムな値(小数)
+                target3.textContent = Math.floor(Math.random() * 10);  // 0~10のランダムな値(整数)
+            });
+        &lt;/script&gt;
+    </code>
+</pre>
+</body>
+</html>
