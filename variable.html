@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>変数</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
@@ -24,11 +25,45 @@
     </style>
 </head>
 <body>
-    <h1>変数について</h1>
-    <p id="target1"></p>
-    <p id="target2"></p>
-    <p id="target3"></p>
-    <p id="target3"></p>
+    <div id="content">
+        <h1>変数について</h1>
+        <p id="target1"></p>
+        <p id="target2"></p>
+        <p id="target3"></p>
+        <p id="target3"></p>
+        <pre id="code">
+            ソースコード
+            <code>
+                &lt;h1&gt;変数について&lt;/h1&gt;
+                &lt;p id="target1"&gt;&lt;/p&gt;
+                &lt;p id="target2"&gt;&lt;/p&gt;
+                &lt;p id="target3"&gt;&lt;/p&gt;
+                &lt;p id="target3"&gt;&lt;/p&gt;
+                &lt;script&gt;
+                    'use strict';
+        
+                    // 要素を取得
+                    const target1 = document.getElementById('target1');
+                    const target2 = document.getElementById('target2');
+                    const target3 = document.getElementById('target3');
+        
+                    // target1のコンテンツにnumの値をセットする
+                    // numという変数に10という値を代入する
+                    let num = 10;
+                    target1.textContent = num;
+                    
+                    // numに10をプラスする
+                    num = num + 10;
+                    target2.textContent = num;
+        
+                    // 文字を扱う場合は''で囲む
+                    let msg = 'Hello';
+                    target3.textContent = msg;
+        
+                &lt;/script&gt;
+            </code>
+        </pre>
+    </div>
     <script>
         'use strict';
 
@@ -50,37 +85,6 @@
         let msg = 'Hello';
         target3.textContent = msg;
     </script>
-<pre id="code">
-    ソースコード
-    <code>
-        &lt;h1&gt;変数について&lt;/h1&gt;
-        &lt;p id="target1"&gt;&lt;/p&gt;
-        &lt;p id="target2"&gt;&lt;/p&gt;
-        &lt;p id="target3"&gt;&lt;/p&gt;
-        &lt;p id="target3"&gt;&lt;/p&gt;
-        &lt;script&gt;
-            'use strict';
 
-            // 要素を取得
-            const target1 = document.getElementById('target1');
-            const target2 = document.getElementById('target2');
-            const target3 = document.getElementById('target3');
-
-            // target1のコンテンツにnumの値をセットする
-            // numという変数に10という値を代入する
-            let num = 10;
-            target1.textContent = num;
-            
-            // numに10をプラスする
-            num = num + 10;
-            target2.textContent = num;
-
-            // 文字を扱う場合は''で囲む
-            let msg = 'Hello';
-            target3.textContent = msg;
-
-        &lt;/script&gt;
-    </code>
-</pre>
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>キー入力2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
@@ -23,8 +24,29 @@
     </style>
 </head>
 <body>
-    <h1>キーボードで入力したキーが繋がって表示されます</h1>
-    <p id="target"></p>
+    <div id="content">
+        <h1>キーボードで入力したキーが繋がって表示されます</h1>
+        <p id="target"></p>
+        <pre id="code">
+            ソースコード（bodyの中のみ抜粋）
+            <code>
+                &lt;h1&gt;キーボードで入力したキーが繋がって表示されます&lt;/h1&gt;
+                &lt;p id="target"&gt;&lt;/p&gt;
+                &lt;script&gt;
+                    'use strict';
+        
+                    // idがtargetの要素を取得
+                    const target = document.getElementById('target');
+        
+                    // キー押下時の処理
+                    document.addEventListener('keydown', e =&gt; {
+                        // 入力した文字をつなげる
+                        target.textContent = target.textContent + e.key;  
+                    });
+                &lt;/script&gt;
+            </code>
+        </pre>
+    </div>
     <script>
         'use strict';
 
@@ -37,24 +59,6 @@
             target.textContent = target.textContent + e.key;  
         });
     </script>
-<pre id="code">
-    ソースコード（bodyの中のみ抜粋）
-    <code>
-        &lt;h1&gt;キーボードで入力したキーが繋がって表示されます&lt;/h1&gt;
-        &lt;p id="target"&gt;&lt;/p&gt;
-        &lt;script&gt;
-            'use strict';
 
-            // idがtargetの要素を取得
-            const target = document.getElementById('target');
-
-            // キー押下時の処理
-            document.addEventListener('keydown', e =&gt; {
-                // 入力した文字をつなげる
-                target.textContent = target.textContent + e.key;  
-            });
-        &lt;/script&gt;
-    </code>
-</pre>
 </body>
 </html>

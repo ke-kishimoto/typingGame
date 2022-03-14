@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>要素の取得と画面への表示</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -14,52 +15,54 @@
     </style>
 </head>
 <body>
-    <h1>要素の取得と画面への表示</h1>
-    <p id="target1"></p>
-    <p id="target2"></p>
-    <script>
-        'use strict';  // ←文法チェックをしてくれる。決まり文句だと思ってください
-
-        // スラッシュ２つはコメント。処理に影響のないもの
-
-        // 要素の取得
-        // idがtarget1要素を取得して、p1という変数に入れる
-        const p1 = document.getElementById('target1');
-        // idがtarget2要素を取得して、p2という変数に入れる
-        const p2 = document.getElementById('target2');
-
-        // 画面への表示
-        // target1の要素のコンテンツにHelloという文字を表示する
-        p1.textContent = 'Hello'; 
-        // target2の要素のコンテンツに100という数値を表示する
-        p2.textContent = 100;
-       
-    </script>
-<pre id="code">
-    ソースコード
-    <code>
-        &lt;h1&gt;要素の取得と画面への表示&lt;/h1&gt;
-        &lt;p id="target1"&gt;&lt;/p&gt;
-        &lt;p id="target2"&gt;&lt;/p&gt;
-        &lt;script&gt;
+    <div id="content">
+        <h1>要素の取得と画面への表示</h1>
+        <p id="target1"></p>
+        <p id="target2"></p>
+        <script>
             'use strict';  // ←文法チェックをしてくれる。決まり文句だと思ってください
-
+    
             // スラッシュ２つはコメント。処理に影響のないもの
-
+    
             // 要素の取得
             // idがtarget1要素を取得して、p1という変数に入れる
             const p1 = document.getElementById('target1');
             // idがtarget2要素を取得して、p2という変数に入れる
             const p2 = document.getElementById('target2');
-
+    
             // 画面への表示
             // target1の要素のコンテンツにHelloという文字を表示する
             p1.textContent = 'Hello'; 
             // target2の要素のコンテンツに100という数値を表示する
             p2.textContent = 100;
-        
-        &lt;/script&gt;
-    </code>
-</pre>
+           
+        </script>
+    <pre id="code">
+        ソースコード
+        <code>
+            &lt;h1&gt;要素の取得と画面への表示&lt;/h1&gt;
+            &lt;p id="target1"&gt;&lt;/p&gt;
+            &lt;p id="target2"&gt;&lt;/p&gt;
+            &lt;script&gt;
+                'use strict';  // ←文法チェックをしてくれる。決まり文句だと思ってください
+    
+                // スラッシュ２つはコメント。処理に影響のないもの
+    
+                // 要素の取得
+                // idがtarget1要素を取得して、p1という変数に入れる
+                const p1 = document.getElementById('target1');
+                // idがtarget2要素を取得して、p2という変数に入れる
+                const p2 = document.getElementById('target2');
+    
+                // 画面への表示
+                // target1の要素のコンテンツにHelloという文字を表示する
+                p1.textContent = 'Hello'; 
+                // target2の要素のコンテンツに100という数値を表示する
+                p2.textContent = 100;
+            
+            &lt;/script&gt;
+        </code>
+    </pre>
+    </div>
 </body>
 </html>

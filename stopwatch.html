@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>ストップウォッチ</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
@@ -23,10 +24,46 @@
     </style>
 </head>
 <body>
-    <h1>ストップウォッチ</h1>
-    <p><button type="button" id="start-btn">スタート</button></p>
-    <p><button type="button" id="stop-btn">ストップ</button></p>
-    <p id="target"></p>
+    <div id="content">
+        <h1>ストップウォッチ</h1>
+        <p><button type="button" id="start-btn">スタート</button></p>
+        <p><button type="button" id="stop-btn">ストップ</button></p>
+        <p id="target"></p>
+        <pre id="code">
+            <code>
+                &lt;h1&gt;ストップウォッチ&lt;/h1&gt;
+                &lt;p&gt;&lt;button type="button" id="start-btn"&gt;スタート&lt;/button&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;button type="button" id="stop-btn"&gt;ストップ&lt;/button&gt;&lt;/p&gt;
+                &lt;p id="target"&gt;&lt;/p&gt;
+                &lt;script&gt;
+                    'use strict';
+        
+                    const target = document.getElementById('target');
+                    let startTime = 0;
+                    let stopTime = 0;
+        
+                    // スタート時の処理
+                    let timeStart = () =&gt; {
+                        startTime = new Date(); // 現在の日時を取得
+                        target.textContent = '';
+                    };
+        
+                    // ストップ時の処理
+                    let timeStop = () =&gt; {
+                        // 現在日時からスタートボタンを押した時の日時を引く
+                        stopTime = new Date - startTime;
+                        // ミリ秒単位なので、1000で割って秒単位にして、小数第２位まで表示
+                        target.textContent = (stopTime / 1000).toFixed(2) + '秒';
+                    }
+        
+                    // スタートボタン押下時処理
+                    document.getElementById('start-btn').addEventListener('click', timeStart);
+                    // ストップボタン押下時の処理
+                    document.getElementById('stop-btn').addEventListener('click', timeStop);
+                &lt;/script&gt;
+            </code>
+        </pre>
+    </div>
     <script>
         'use strict';
 
@@ -54,39 +91,6 @@
         document.getElementById('stop-btn').addEventListener('click', timeStop);
     </script>
 
-<pre id="code">
-    <code>
-        &lt;h1&gt;ストップウォッチ&lt;/h1&gt;
-        &lt;p&gt;&lt;button type="button" id="start-btn"&gt;スタート&lt;/button&gt;&lt;/p&gt;
-        &lt;p&gt;&lt;button type="button" id="stop-btn"&gt;ストップ&lt;/button&gt;&lt;/p&gt;
-        &lt;p id="target"&gt;&lt;/p&gt;
-        &lt;script&gt;
-            'use strict';
 
-            const target = document.getElementById('target');
-            let startTime = 0;
-            let stopTime = 0;
-
-            // スタート時の処理
-            let timeStart = () =&gt; {
-                startTime = new Date(); // 現在の日時を取得
-                target.textContent = '';
-            };
-
-            // ストップ時の処理
-            let timeStop = () =&gt; {
-                // 現在日時からスタートボタンを押した時の日時を引く
-                stopTime = new Date - startTime;
-                // ミリ秒単位なので、1000で割って秒単位にして、小数第２位まで表示
-                target.textContent = (stopTime / 1000).toFixed(2) + '秒';
-            }
-
-            // スタートボタン押下時処理
-            document.getElementById('start-btn').addEventListener('click', timeStart);
-            // ストップボタン押下時の処理
-            document.getElementById('stop-btn').addEventListener('click', timeStop);
-        &lt;/script&gt;
-    </code>
-</pre>
 </body>
 </html>

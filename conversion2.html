@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>文字変換2</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -20,57 +21,24 @@
     </style>
 </head>
 <body>
-    <h1>入力したキーが表示されている文字と一致したら_に変換<br>
-        1単語終えたら、ランダムで別の単語に切り替える
-    </h1>
-    <p id="target"></p>
-    <script>
-        'use strict';
-
-        let words = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'pink']; // 配列
-        let word = words[Math.floor(Math.random() * words.length)];
-        let index = 0; // 入力中の文字の位置
-        const target = document.getElementById('target');
-
-        target.textContent = word;
-
-        // キー押下時の処理
-        document.addEventListener('keydown', e => {
-
-            // 入力したキーが先頭の文字と一致した場合
-            if(word.charAt(index) === e.key)  {
-                index = index + 1; // 文字の位置をカウントアップ
-                // 入力した文字を「_」に置き換える
-                target.textContent = '_'.repeat(index) + word.substring(index);
-            }  
-            // 単語の入力が終えたら次の単語が表示されるようにする
-            if(index === word.length) {
-                index = 0;
-                word = words[Math.floor(Math.random() * words.length)];
-                target.textContent = word;
-            }
-        });
-
-    </script>
-<pre id="code">
-    ソースコード（bodyの中のみ抜粋）
-    <code>
-        &lt;h1&gt;入力したキーが表示されている文字と一致したら_に変換
-        &lt;/h1&gt;
-        &lt;p id="target"&gt;&lt;/p&gt;
-        &lt;script&gt;
+    <div id="content">
+        <h1>入力したキーが表示されている文字と一致したら_に変換<br>
+            1単語終えたら、ランダムで別の単語に切り替える
+        </h1>
+        <p id="target"></p>
+        <script>
             'use strict';
-
+    
             let words = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'pink']; // 配列
             let word = words[Math.floor(Math.random() * words.length)];
             let index = 0; // 入力中の文字の位置
             const target = document.getElementById('target');
-
+    
             target.textContent = word;
-
+    
             // キー押下時の処理
-            document.addEventListener('keydown', e =&gt; {
-
+            document.addEventListener('keydown', e => {
+    
                 // 入力したキーが先頭の文字と一致した場合
                 if(word.charAt(index) === e.key)  {
                     index = index + 1; // 文字の位置をカウントアップ
@@ -84,9 +52,44 @@
                     target.textContent = word;
                 }
             });
-
-        &lt;/script&gt;
-    </code>
-</pre>
+    
+        </script>
+    <pre id="code">
+        ソースコード（bodyの中のみ抜粋）
+        <code>
+            &lt;h1&gt;入力したキーが表示されている文字と一致したら_に変換
+            &lt;/h1&gt;
+            &lt;p id="target"&gt;&lt;/p&gt;
+            &lt;script&gt;
+                'use strict';
+    
+                let words = ['red', 'blue', 'green', 'yellow', 'black', 'white', 'pink']; // 配列
+                let word = words[Math.floor(Math.random() * words.length)];
+                let index = 0; // 入力中の文字の位置
+                const target = document.getElementById('target');
+    
+                target.textContent = word;
+    
+                // キー押下時の処理
+                document.addEventListener('keydown', e =&gt; {
+    
+                    // 入力したキーが先頭の文字と一致した場合
+                    if(word.charAt(index) === e.key)  {
+                        index = index + 1; // 文字の位置をカウントアップ
+                        // 入力した文字を「_」に置き換える
+                        target.textContent = '_'.repeat(index) + word.substring(index);
+                    }  
+                    // 単語の入力が終えたら次の単語が表示されるようにする
+                    if(index === word.length) {
+                        index = 0;
+                        word = words[Math.floor(Math.random() * words.length)];
+                        target.textContent = word;
+                    }
+                });
+    
+            &lt;/script&gt;
+        </code>
+    </pre>
+    </div>
 </body>
 </html>

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>タイピングゲームを作ろう</title>
     <style>
         body {
@@ -11,117 +12,119 @@
     </style>
 </head>
 <body>
-    <h1>タイピングゲームを作ろう</h1>
-    <h2>1. 事前学習（用語と環境）</h2>
-    <p><a href="glossary.html">用語集</a></p>
-
-    <p>以下のリンク先にコードを書くことで結果を確認することができます。</p>
-    <p><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_default">w3schools</a></p>
-
-    <h2>2. 事前学習（HTML）</h2>
-    <p><a href="html1.html">HTMLの基本を理解しよう1</a></p>
-    <p><a href="html2.html">HTMLの基本を理解しよう2</a></p>
-    <p>
-        参考サイト<br>
-        <a href="http://www.htmq.com/html/indexm.shtml" target="_blank">HTMLクイックリファレンス</a><br>
-        <a href="http://www.tohoho-web.com/html/index.htm" target="_blank">とほほのWWW入門（HTMLリファレンス）</a>
-    </p>
-    <h2>3. 事前学習（CSS）</h2>
-    <p><a href="css1.html">CSSの基本を理解しよう</a></p>
-    <h2>4. 事前学習（JavaScript）</h2>
-    <p><a href="element.html">要素の取得と画面表示を理解しよう</a></p>
-    <p><a href="variable.html">変数を理解しよう</a></p>
-    <p><a href="btn.html">ボタンが押された時の処理を理解しよう</a></p>
-    <p><a href="if.html">if文を理解しよう</a></p>
-    <p><a href="random.html">ランダムな値の取得を理解しよう</a></p>
-    <p><a href="array.html">配列を理解しよう</a></p>
-    <p><a href="type1.html">キーボードから入力された時の処理を理解しよう</a></p>
-    <p><a href="type2.html">キーボードから入力された時の処理を理解しよう2</a></p>
-    <p><a href="conversion.html">文字を変換する処理を理解しよう</a></p>
-    <p><a href="conversion2.html">文字を変換する処理を理解しよう2</a></p>
-    <h2>5. ワーク</h2>
-    <p>
-        事前学習の内容を元に、以下のワークに挑戦してみよう！<br>
-        ※順番通りでなくても構いません。好きなものにチャレンジしてください。
-    </p>
-
-    <h3>
-        ワーク1<br>
-        サンプルのリンクを参考にしてタイピングゲームを作成しよう<br>
-        スタートボタンをクリックしたらゲームが開始し、<br>
-        5個入力を終えたらクリアと表示されるタイピングゲームを作ろう
-    </h3>
-    <p><a href="sample1.html">サンプル</a></p>
-    <p>
-        ヒント<br>
-        ボタンが押された時の処理と、文字を変換する処理を組み合わせてみよう<br>
-        １ワード完了する毎に値を1ずつ増やす変数を用意して、5になったらクリアと表示しよう
-    </p>
-    <br>
+    <div id="content">
+        <h1>タイピングゲームを作ろう</h1>
+        <h2>1. 事前学習（用語と環境）</h2>
+        <p><a href="glossary.html">用語集</a></p>
     
-    <h3>
-        ワーク2<br>
-        ワーク1で作成したタイピングゲームのCSSを修正して、背景色・文字色・フォントサイズを自分の好みに変えてみよう
-        また、出題されるワードを自分が好きなワードに変えてみよう
-    </h3>
-    <br>
+        <p>以下のリンク先にコードを書くことで結果を確認することができます。</p>
+        <p><a target="_blank" href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_default">w3schools</a></p>
     
-    <h3>
-        ワーク3<br>
-        残りの出題数が表示されるようにしてみよう
-    </h3>
-    <p><a href="sample3.html">サンプル</a></p>
-    <br>
-
-    <h3>
-        ワーク4<br>
-        結果画面でタイプミスの数を表示してみよう
-    </h3>
-    <p><a href="sample4.html">サンプル</a></p>
-    <p>
-        ヒント<br>
-        入力したキーと、表示されている文字が一致しない場合に値を1ずつ増やす変数を用意しよう
-    </p>
-    <br>
-
-    <h3>
-        ワーク5<br>
-        クリア時間を表示してみよう
-    </h3>
-    <p><a href="sample5.html">サンプル</a></p>
-    <p>
-        ヒント<br>
-        <a href="stopwatch.html">ストップウォッチのサンプル</a>
-    </p>
-    <br>
-
-    <h3>
-        ワーク6<br>
-        出題される単語のテーマを選択できるようにしてみよう
-    </h3>
-    <p><a href="sample6.html">サンプル</a></p>
-    <p>
-        ヒント<br>
-        <a href="pulldown.html">プルダウンから値を取得するサンプル</a>
-    </p>
-    <br>
-
-    <h3>
-        ワーク7<br>
-        リアルタイムで経過時間を表示してみよう（難易度：高）
-    </h3>
-    <p><a href="sample7.html">サンプル</a></p>
-    <p>
-        ヒント<br>
-        <a href="timer.html">タイマーのサンプル</a>
-    </p>
-    <br>
+        <h2>2. 事前学習（HTML）</h2>
+        <p><a href="html1.html">HTMLの基本を理解しよう1</a></p>
+        <p><a href="html2.html">HTMLの基本を理解しよう2</a></p>
+        <p>
+            参考サイト<br>
+            <a href="http://www.htmq.com/html/indexm.shtml" target="_blank">HTMLクイックリファレンス</a><br>
+            <a href="http://www.tohoho-web.com/html/index.htm" target="_blank">とほほのWWW入門（HTMLリファレンス）</a>
+        </p>
+        <h2>3. 事前学習（CSS）</h2>
+        <p><a href="css1.html">CSSの基本を理解しよう</a></p>
+        <h2>4. 事前学習（JavaScript）</h2>
+        <p><a href="element.html">要素の取得と画面表示を理解しよう</a></p>
+        <p><a href="variable.html">変数を理解しよう</a></p>
+        <p><a href="btn.html">ボタンが押された時の処理を理解しよう</a></p>
+        <p><a href="if.html">if文を理解しよう</a></p>
+        <p><a href="random.html">ランダムな値の取得を理解しよう</a></p>
+        <p><a href="array.html">配列を理解しよう</a></p>
+        <p><a href="type1.html">キーボードから入力された時の処理を理解しよう</a></p>
+        <p><a href="type2.html">キーボードから入力された時の処理を理解しよう2</a></p>
+        <p><a href="conversion.html">文字を変換する処理を理解しよう</a></p>
+        <p><a href="conversion2.html">文字を変換する処理を理解しよう2</a></p>
+        <h2>5. ワーク</h2>
+        <p>
+            事前学習の内容を元に、以下のワークに挑戦してみよう！<br>
+            ※順番通りでなくても構いません。好きなものにチャレンジしてください。
+        </p>
     
-    <h3>
-        ワーク8<br>
-        ワーク2〜7の内容を複数組み合わせたタイピングゲームを作成してみよう
-    </h3>
-    <br>
+        <h3>
+            ワーク1<br>
+            サンプルのリンクを参考にしてタイピングゲームを作成しよう<br>
+            スタートボタンをクリックしたらゲームが開始し、<br>
+            5個入力を終えたらクリアと表示されるタイピングゲームを作ろう
+        </h3>
+        <p><a href="sample1.html">サンプル</a></p>
+        <p>
+            ヒント<br>
+            ボタンが押された時の処理と、文字を変換する処理を組み合わせてみよう<br>
+            １ワード完了する毎に値を1ずつ増やす変数を用意して、5になったらクリアと表示しよう
+        </p>
+        <br>
+        
+        <h3>
+            ワーク2<br>
+            ワーク1で作成したタイピングゲームのCSSを修正して、背景色・文字色・フォントサイズを自分の好みに変えてみよう
+            また、出題されるワードを自分が好きなワードに変えてみよう
+        </h3>
+        <br>
+        
+        <h3>
+            ワーク3<br>
+            残りの出題数が表示されるようにしてみよう
+        </h3>
+        <p><a href="sample3.html">サンプル</a></p>
+        <br>
+    
+        <h3>
+            ワーク4<br>
+            結果画面でタイプミスの数を表示してみよう
+        </h3>
+        <p><a href="sample4.html">サンプル</a></p>
+        <p>
+            ヒント<br>
+            入力したキーと、表示されている文字が一致しない場合に値を1ずつ増やす変数を用意しよう
+        </p>
+        <br>
+    
+        <h3>
+            ワーク5<br>
+            クリア時間を表示してみよう
+        </h3>
+        <p><a href="sample5.html">サンプル</a></p>
+        <p>
+            ヒント<br>
+            <a href="stopwatch.html">ストップウォッチのサンプル</a>
+        </p>
+        <br>
+    
+        <h3>
+            ワーク6<br>
+            出題される単語のテーマを選択できるようにしてみよう
+        </h3>
+        <p><a href="sample6.html">サンプル</a></p>
+        <p>
+            ヒント<br>
+            <a href="pulldown.html">プルダウンから値を取得するサンプル</a>
+        </p>
+        <br>
+    
+        <h3>
+            ワーク7<br>
+            リアルタイムで経過時間を表示してみよう（難易度：高）
+        </h3>
+        <p><a href="sample7.html">サンプル</a></p>
+        <p>
+            ヒント<br>
+            <a href="timer.html">タイマーのサンプル</a>
+        </p>
+        <br>
+        
+        <h3>
+            ワーク8<br>
+            ワーク2〜7の内容を複数組み合わせたタイピングゲームを作成してみよう
+        </h3>
+        <br>
+    </div>
 
 </body>
 </html>

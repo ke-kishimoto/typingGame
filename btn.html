@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ボタン押下時の処理1</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -24,39 +25,41 @@
     </style>
 </head>
 <body>
-    <h1>ボタン押下時の処理</h1>
-    <p><button type="button" id="start-btn">ボタン</button></p>
-    <p id="target"></p>
-    <script>
-        'use strict';
-
-        // idがtargetの要素を取得
-        const target = document.getElementById('target');
-
-        // ボタンがクリックされた時の処理
-        document.getElementById('start-btn').addEventListener('click', e => {
-            target.textContent = 'クリックされました';
-        });
-    </script>
-
-<pre id="code">
-    ソースコード（bodyの中のみ抜粋）
-    <code>
-        &lt;h1&gt;ボタン押下時の処理&lt;/h1&gt;
-        &lt;p&gt;&lt;button type="button" id="start-btn"&gt;ボタン&lt;/button&gt;&lt;/p&gt;
-        &lt;p id="target"&gt;&lt;/p&gt;
-        &lt;script&gt;
+    <div id="content">
+        <h1>ボタン押下時の処理</h1>
+        <p><button type="button" id="start-btn">ボタン</button></p>
+        <p id="target"></p>
+        <script>
             'use strict';
-
+    
             // idがtargetの要素を取得
             const target = document.getElementById('target');
-
+    
             // ボタンがクリックされた時の処理
-            document.getElementById('start-btn').addEventListener('click', e =&gt; {
+            document.getElementById('start-btn').addEventListener('click', e => {
                 target.textContent = 'クリックされました';
             });
-        &lt;/script&gt;
-    </code>
-</pre>
+        </script>
+    
+    <pre id="code">
+        ソースコード（bodyの中のみ抜粋）
+        <code>
+            &lt;h1&gt;ボタン押下時の処理&lt;/h1&gt;
+            &lt;p&gt;&lt;button type="button" id="start-btn"&gt;ボタン&lt;/button&gt;&lt;/p&gt;
+            &lt;p id="target"&gt;&lt;/p&gt;
+            &lt;script&gt;
+                'use strict';
+    
+                // idがtargetの要素を取得
+                const target = document.getElementById('target');
+    
+                // ボタンがクリックされた時の処理
+                document.getElementById('start-btn').addEventListener('click', e =&gt; {
+                    target.textContent = 'クリックされました';
+                });
+            &lt;/script&gt;
+        </code>
+    </pre>
+    </div>
 </body>
 </html>

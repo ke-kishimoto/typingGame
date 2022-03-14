@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>タイマー</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
@@ -14,12 +15,14 @@
     </style>
 </head>
 <body>
-    <h1>タイマー</h1>
-    <p>
-        <button type="button" id="start-btn">スタート</button>
-        <button type="button" id="stop-btn">ストップ</button>
-    </p>
-    <p id="time"></p>
+    <div id="content">
+        <h1>タイマー</h1>
+        <p>
+            <button type="button" id="start-btn">スタート</button>
+            <button type="button" id="stop-btn">ストップ</button>
+        </p>
+        <p id="time"></p>
+    </div>
     <script>
         'use strict';
 

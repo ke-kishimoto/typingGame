@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CSSの基本</title>
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/vs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
@@ -44,55 +45,57 @@
     </style>
 </head>
 <body>
-    <h1>CSSの基本を理解しよう</h1>
-    <p>CSSの基本を理解するためのページです</p>
-    <p id="example">CSSのではWebページのレイアウトを整えることができます</p>
-    <p><button type="button" id="btn">ボタン</button></p>
-<pre id="code">
-    ソースコード
-    <code>
-        &lt;!DOCTYPE html&gt;
-        &lt;html lang="ja"&gt;
-        &lt;head&gt;
-            &lt;meta charset="UTF-8"&gt;
-            &lt;title&gt;CSSの基本&lt;/title&gt;
-            &lt;style&gt;
-                /*
-                セレクタ {
-                    プロパティ: 値;
-                }
-                セレクタ：どの要素の
-                プロパティ：何を
-                値：どうするか
-                */
-                body {
-                    text-align: center;　/* 全体を中央よせにします */
-                }
-        
-                h1 {
-                    background-color: pink;　/* h1の背景色をピンクにします */
-                    color: blue;　/* 文字色を青にします */
-                }
-        
-                /* idがexampleの要素が対象になります */
-                #example {
-                    color: red;
-                }
-        
-                #btn {
-                    font-size: 24px;　/* フォントサイズを24ピクセルにする */
-                }
-        
-            &lt;/style&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-            &lt;h1&gt;CSSの基本を理解しよう&lt;/h1&gt;
-            &lt;p&gt;CSSの基本を理解するためのページです&lt;/p&gt;
-            &lt;p id="example"&gt;CSSのではWebページのレイアウトを整えることができます&lt;/p&gt;
-            &lt;p&gt;&lt;button type="button" id="btn"&gt;ボタン&lt;/button&gt;&lt;/p&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;
-    </code>
-</pre>
+    <div id="content">
+        <h1>CSSの基本を理解しよう</h1>
+        <p>CSSの基本を理解するためのページです</p>
+        <p id="example">CSSのではWebページのレイアウトを整えることができます</p>
+        <p><button type="button" id="btn">ボタン</button></p>
+    <pre id="code">
+        ソースコード
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="ja"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;CSSの基本&lt;/title&gt;
+                &lt;style&gt;
+                    /*
+                    セレクタ {
+                        プロパティ: 値;
+                    }
+                    セレクタ：どの要素の
+                    プロパティ：何を
+                    値：どうするか
+                    */
+                    body {
+                        text-align: center;　/* 全体を中央よせにします */
+                    }
+            
+                    h1 {
+                        background-color: pink;　/* h1の背景色をピンクにします */
+                        color: blue;　/* 文字色を青にします */
+                    }
+            
+                    /* idがexampleの要素が対象になります */
+                    #example {
+                        color: red;
+                    }
+            
+                    #btn {
+                        font-size: 24px;　/* フォントサイズを24ピクセルにする */
+                    }
+            
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;CSSの基本を理解しよう&lt;/h1&gt;
+                &lt;p&gt;CSSの基本を理解するためのページです&lt;/p&gt;
+                &lt;p id="example"&gt;CSSのではWebページのレイアウトを整えることができます&lt;/p&gt;
+                &lt;p&gt;&lt;button type="button" id="btn"&gt;ボタン&lt;/button&gt;&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+    </pre>
+    </div>
 </body>
 </html>

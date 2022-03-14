@@ -1,0 +1,11 @@
+body {
+    background-color: #fcf4ec;
+}
+
+#content {
+    width: 70%;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: aliceblue;
+    font-family: "Yu Gothic", "YakuHanJPs", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+}
